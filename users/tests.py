@@ -5,7 +5,7 @@ from rest_framework.permissions import AllowAny
 from rest_framework.test import APITestCase
 
 from users.models import User
-from users.views import UserDeleteAPIView, UserUpdateAPIView
+from users.views import UserUpdateAPIView
 
 
 class UserTestCase(APITestCase):

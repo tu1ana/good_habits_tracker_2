@@ -1,9 +1,9 @@
 from django.contrib.auth import get_user_model
 from rest_framework import permissions
-from rest_framework.generics import CreateAPIView, UpdateAPIView, ListAPIView, RetrieveAPIView, DestroyAPIView
+from rest_framework.generics import CreateAPIView, UpdateAPIView, \
+    ListAPIView, RetrieveAPIView, DestroyAPIView
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 
-from habits.permissions import IsHuman
 from users.models import User
 from users.permissions import IsAuthUser
 from users.serializers import UserSerializer
