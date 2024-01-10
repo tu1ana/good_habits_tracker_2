@@ -8,7 +8,8 @@ services:
 
   db:
     image: postgres
-
+#    env_file: # wouldn't work; get back to it later
+#      - '.env'
     environment:
       - POSTGRES_PASSWORD=mysecretpassword
       - PGDATA=/var/lib/postgresql/data/pgdata
