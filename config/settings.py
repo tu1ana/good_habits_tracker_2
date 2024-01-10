@@ -85,9 +85,13 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DATABASE_NAME'),
-        'USER': os.getenv('DATABASE_USER'),
-        'PASSWORD': os.getenv('DATABASE_PASSWORD')
+        'NAME': 'good_habits',
+        'USER': 'postgres',
+        'PASSWORD': 'mysecretpassword',
+        # 'NAME': os.getenv('DATABASE_NAME'),
+        # 'USER': os.getenv('DATABASE_USER'),
+        # 'PASSWORD': os.getenv('DATABASE_PASSWORD'),
+        'HOST': 'db'
     }
 }
 
@@ -150,7 +154,7 @@ REST_FRAMEWORK = {
     ]
 }
 
-CELERY_BROKER_URL = 'redis://localhost:6379'
+CELERY_BROKER_URL = 'redis://redis:6379'
 CELERY_TIMEZONE = "Europe/Moscow"
 
 TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
